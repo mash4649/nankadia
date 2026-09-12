@@ -25,9 +25,12 @@ export interface RecommendationResponse {
   resolution?: { resolutionId: string; title: string; actionCopy: string; supportingCopy?: string };
   fitReceipt: string[];
 }
-export interface AcceptRecommendationInput { decisionId: string; idempotencyKey: string; }
-export interface SkipRecommendationInput { decisionId: string; idempotencyKey: string; }
+export interface AcceptRecommendationInput { recommendationImpressionId: string; idempotencyKey: string; }
+export interface SkipRecommendationInput { recommendationImpressionId: string; idempotencyKey: string; }
+export interface RecordExternalOpenInput { executionId: string; accessRouteId: string; idempotencyKey: string; }
 export interface StartExecutionInput { executionId: string; idempotencyKey: string; }
 export interface CompleteExecutionInput { executionId: string; idempotencyKey: string; }
+export interface AbortExecutionInput { executionId: string; idempotencyKey: string; }
 export interface RecordOutcomeInput { executionId: string; value: 'GOOD'|'NEUTRAL'|'BAD'; idempotencyKey: string; }
 export interface RecordDiscoveryInput { executionId: string; answer: 'LIKELY_YES'|'UNCERTAIN'|'LIKELY_NO'|'SKIP'; idempotencyKey: string; }
+export interface KeepBaselineInput { momentId: string; idempotencyKey: string; }
