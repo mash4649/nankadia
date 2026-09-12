@@ -6,7 +6,12 @@
 - `SUPABASE_TELEMETRY_DISABLED=1 supabase init`: 成功
 - ローカル設定: [`supabase/config.toml`](../../supabase/config.toml)
 - 匿名サインイン: 有効（P0 方針 D-03 に合わせた）
-- リモートプロジェクト: **未接続**（`supabase link` 未実行）
+- Organization: `mash4649` (`vxsokgtxeykcjqgqnsoe`)
+- リモートプロジェクト: `nankadia-main` (`uqkvntykubpbqzazlxpi`)
+- リージョン: Northeast Asia (Tokyo) (`ap-northeast-1`)
+- DB: PostgreSQL `17.6.1.166`（`config.toml` の major version `17` と一致）
+- CLI link: 完了。`status=ACTIVE_HEALTHY`
+- 作成時: `--size` と `--high-availability` を指定せず、Free Plan の共有リソースを想定して作成（Billing 表示は要確認）
 
 ## 値の種類と保管場所
 
@@ -15,28 +20,25 @@
 | Expo クライアント | `EXPO_PUBLIC_SUPABASE_URL`、`EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | EAS の各環境またはローカル `.env.local`。アプリへ埋め込まれるため公開値のみ。 |
 | Edge Functions／サーバー | `SUPABASE_URL`、`SUPABASE_SECRET_KEYS`（必要な secret key を選択） | Supabase Functions Secrets。クライアント、Git、ログへ出さない。 |
 | CLI 管理 API | `SUPABASE_ACCESS_TOKEN` または `supabase login` | 開発者マシン／CI の秘密ストア。Gitへ保存しない。 |
-| DB 接続 | `SUPABASE_DB_PASSWORD`（`supabase link` のプロンプト回避時のみ） | 一時的な環境変数または秘密ストア。ファイルへ保存しない。 |
+| DB 接続 | `SUPABASE_DB_PASSWORD`（`supabase link` 等） | ルート `.env.local`（Git対象外、権限 `600`）。ログへ出さない。 |
 
 ## 未確定（推測で埋めない）
 
-1. Supabase の組織と対象プロジェクト
-2. 対象プロジェクトの `project_ref`（Dashboard URL の `/project/<project-ref>`）
-3. リモート DB の major version（`SHOW server_version;`）。`config.toml` の `db.major_version = 17` は CLI 初期値であり、リモート確認前に確定しない
-4. リモートリージョンが Tokyo（`ap-northeast-1`）であること
-5. リモートで匿名認証が有効であること、および発行済み publishable／secret key
-6. リモート DB パスワード（チャットやリポジトリへ貼り付けない）
+1. Dashboard の Billing 表示で Free Plan であること（CLI一覧では料金プランを返さないため未確認）
+2. Edge Functions 用 secret key を Functions Secrets に登録すること（クライアント／Gitへ出さない）
+3. EAS の `development`／`preview`／`production` 環境へ公開値を登録すること（アプリ実装時）
 
 ## 接続開始のゲート
 
-上記 1〜6 を確認してから、次の順序で実行する。
+上記の未確定事項を確認してから、次の順序で実行する。
 
 ```bash
 supabase login
-supabase link --project-ref <project-ref>
+supabase link --project-ref uqkvntykubpbqzazlxpi
 supabase db push
 ```
 
-`project-ref` と認証情報が未確定の間は `supabase link`／`supabase db push` を実行しない。リモート作成・選択や秘密値の提示が必要になった時点で、別途ユーザー確認を取る。
+`supabase link` は完了済み。migration が作成されるまで `supabase db push` は実行しない。
 
 ## 参照
 
