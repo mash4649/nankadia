@@ -11,7 +11,8 @@
 - リージョン: Northeast Asia (Tokyo) (`ap-northeast-1`)
 - DB: PostgreSQL `17.6.1.166`（`config.toml` の major version `17` と一致）
 - CLI link: 完了。`status=ACTIVE_HEALTHY`
-- 作成時: `--size` と `--high-availability` を指定せず、Free Plan の共有リソースを想定して作成（Billing 表示は要確認）
+- 料金プラン: `Free` を Dashboard で確認。Compute は `nano`（`t4g.nano`）
+- 作成時: `--size` と `--high-availability` を指定せず、Free Plan の共有リソースで作成
 
 ## 値の種類と保管場所
 
@@ -24,9 +25,8 @@
 
 ## 未確定（推測で埋めない）
 
-1. Dashboard の Billing 表示で Free Plan であること（CLI一覧では料金プランを返さないため未確認）
-2. Edge Functions 用 secret key を Functions Secrets に登録すること（クライアント／Gitへ出さない）
-3. EAS の `development`／`preview`／`production` 環境へ公開値を登録すること（アプリ実装時）
+1. Edge Functions 用 secret key を Functions Secrets に登録すること（クライアント／Gitへ出さない）
+2. EAS の `development`／`preview`／`production` 環境へ公開値を登録すること（アプリ実装時）
 
 ## 接続開始のゲート
 
