@@ -1,0 +1,7 @@
+{
+  "database": "dolt",
+  "backend": "dolt",
+  "dolt_mode": "embedded",
+  "dolt_database": "nankadia_main",
+  "project_id": "53bc5ca8-c07d-450e-a983-6baf0dc65ad8"
+}
