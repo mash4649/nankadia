@@ -1,0 +1,1 @@
+{"compilerOptions": {"strict": true, "noEmit": true, "target": "ES2022", "module": "ESNext", "moduleResolution": "Bundler"}, "include": ["/mnt/data/NANKADIA_P0_Implementation_Package_v1.0_20260912/contracts/*.ts"]}

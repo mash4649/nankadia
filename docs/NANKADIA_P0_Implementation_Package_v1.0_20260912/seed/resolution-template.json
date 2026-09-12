@@ -1,0 +1,26 @@
+{
+  "resolution_id": "SC-XXX",
+  "experience_id": "EXP-XXX",
+  "title": "",
+  "action_copy": "",
+  "supporting_copy": "",
+  "trajectory_compatibility": [
+    "ANY"
+  ],
+  "required_detour_scope": "NONE",
+  "need_conflicts": [],
+  "soft_context_requirements": {},
+  "expected_duration_minutes": null,
+  "effort_level": null,
+  "cost_bucket": null,
+  "indoor_outdoor": null,
+  "weather_dependency": null,
+  "mobility_requirement": null,
+  "place_dependency": null,
+  "required_resources": [],
+  "dynamic_fact_requirements": [],
+  "semantic_cluster": "",
+  "discovery_quality": null,
+  "content_version": "1",
+  "review_status": "REVIEW_REQUIRED"
+}

@@ -1,0 +1,107 @@
+# Slice A Server Command Contract
+
+All commands are server-authoritative and idempotent. Transport may be REST/RPC/function call; semantics are fixed.
+
+## `start_moment`
+
+Input: `app_session_id`, idempotency key.  
+Precondition: caller owns session.  
+Mutation: create explicit `moment`.  
+Event: `moment_started`.
+
+## `resolve_moment_mode`
+
+Input: `moment_id`, one Moment Mode answer.  
+Precondition: caller owns Moment; no prior non-required question violation.  
+Mutation: create new Context Snapshot resolving `trajectory_type + detour_budget`, preserve/derive need.  
+Events: `context_answered`, `context_snapshot_created`, `context_resolved` when enough context exists.
+
+## `resolve_immediate_need`
+
+Input: `moment_id`, one allowlisted `immediate_need`.  
+Precondition: Moment Mode non-required question was not already used in this Moment unless this is a required correction path.  
+Mutation: create new Context Snapshot.  
+Events: `context_answered`, `context_snapshot_created`, `context_resolved`.
+
+## `correct_context`
+
+Input: `moment_id`, base snapshot, allowlisted patch.  
+Precondition: base snapshot belongs to Moment; patch does not add new axes.  
+Mutation: create a new immutable Context Snapshot.  
+Events: `context_corrected`, `context_snapshot_created`.
+
+## `request_recommendation`
+
+Input: `moment_id`, `context_snapshot_id`.  
+Precondition: exact active config/cohort/core release are resolved server-side.  
+Mutation: create immutable `recommendation_decision`; if matched, create impression when rendered/acknowledged according to UI boundary.  
+Events: `recommendation_requested`, then `recommendation_no_match` or `recommendation_impression`.
+
+Recommendation command must persist trace reason codes sufficient to reproduce exclusion/bucket choice. It must not persist hidden chain-of-thought.
+
+## `skip_recommendation`
+
+Input: decision/impression ID.  
+Precondition: visible unresolved impression owned by user.  
+Mutation: mark impression skipped; does not mutate profile/Outcome.  
+Event: `recommendation_skipped`.
+
+## `accept_recommendation`
+
+Input: decision/impression ID.  
+Precondition: valid current impression.  
+Mutation: create `execution` in `ACCEPTED`.  
+Event: `recommendation_accepted`.
+
+## `record_external_open`
+
+Input: execution ID + access route.  
+Mutation: no Execution state promotion.  
+Event: `external_open`.
+
+## `start_execution`
+
+Input: execution ID.  
+Precondition: state = ACCEPTED.  
+Mutation: ACCEPTED→STARTED.  
+Event: `action_started` in same transaction.
+
+## `complete_execution`
+
+Precondition: state = STARTED.  
+Mutation: STARTED→COMPLETED.  
+Event: `execution_completed`.
+
+## `abort_execution`
+
+Precondition: state = STARTED.  
+Mutation: STARTED→ABORTED.  
+Event: `execution_aborted`.
+
+## `record_outcome`
+
+Precondition: execution = COMPLETED.  
+Mutation: Outcome→RECORDED with GOOD/NEUTRAL/BAD.  
+Event: `outcome_recorded`.
+
+Missingness is represented explicitly by a server/UX policy event/state, but it never blocks a later Moment.
+
+## `record_incremental_discovery`
+
+Precondition: completed execution; prompt sampled/shown according to policy.  
+Mutation: one answer record.  
+Event: `incremental_discovery_answered`.
+
+## `expand_scope`
+
+Input: current snapshot ID.  
+Precondition: explicit user action, current detour ≠ OPEN.  
+Mutation: new snapshot with adjacent `detour_budget` only; all other context preserved unless separately corrected.  
+Event: `scope_expanded` + `context_snapshot_created`.  
+Then user may request a new recommendation.
+
+## `keep_baseline`
+
+Input: Moment ID.  
+Mutation: no fabricated outcome/action. Moment may end.  
+Event: `fallback_keep_baseline`.

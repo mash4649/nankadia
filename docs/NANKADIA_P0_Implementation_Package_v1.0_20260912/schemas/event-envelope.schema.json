@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EventEnvelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "event_name",
+    "event_schema_version",
+    "user_id",
+    "app_session_id",
+    "metric_contract_version",
+    "client_occurred_at",
+    "client_version",
+    "payload"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string"
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "event_schema_version": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "app_session_id": {
+      "type": "string"
+    },
+    "moment_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "proof_cohort_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "experiment_config_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "metric_contract_version": {
+      "type": "string"
+    },
+    "client_occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "server_received_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "client_version": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    }
+  }
+}

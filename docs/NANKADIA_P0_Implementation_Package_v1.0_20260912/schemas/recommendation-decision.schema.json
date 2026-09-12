@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RecommendationDecision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "recommendation_decision_id",
+    "moment_id",
+    "context_snapshot_id",
+    "experiment_config_id",
+    "core_pool_version",
+    "ranking_policy_version",
+    "eligible_candidate_count",
+    "excluded_reason_counts",
+    "is_no_match"
+  ],
+  "properties": {
+    "recommendation_decision_id": {
+      "type": "string"
+    },
+    "moment_id": {
+      "type": "string"
+    },
+    "context_snapshot_id": {
+      "type": "string"
+    },
+    "experiment_config_id": {
+      "type": "string"
+    },
+    "core_pool_version": {
+      "type": "string"
+    },
+    "ranking_policy_version": {
+      "type": "string"
+    },
+    "eligible_candidate_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "selected_bucket": {
+      "enum": [
+        "A_DIRECT_FIT",
+        "B_ACCEPTABLE",
+        null
+      ]
+    },
+    "selected_resolution_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "excluded_reason_counts": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    },
+    "candidate_trace": {
+      "type": "array"
+    },
+    "is_no_match": {
+      "type": "boolean"
+    }
+  }
+}

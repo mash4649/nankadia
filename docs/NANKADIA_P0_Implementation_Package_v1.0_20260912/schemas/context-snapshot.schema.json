@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ContextSnapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "moment_id",
+    "snapshot_version",
+    "context_policy_version",
+    "trajectory_type",
+    "detour_budget",
+    "immediate_need",
+    "context_freshness"
+  ],
+  "properties": {
+    "moment_id": {
+      "type": "string"
+    },
+    "snapshot_version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "context_policy_version": {
+      "type": "string"
+    },
+    "trajectory_type": {
+      "enum": [
+        "RETURNING_HOME",
+        "EN_ROUTE_FIXED",
+        "STAYING",
+        "WAITING",
+        "OPEN_ENDED",
+        "UNKNOWN"
+      ]
+    },
+    "detour_budget": {
+      "enum": [
+        "NONE",
+        "SMALL",
+        "OPEN"
+      ]
+    },
+    "immediate_need": {
+      "enum": [
+        "NONE",
+        "MEAL_PENDING",
+        "REST_NEEDED",
+        "UNKNOWN"
+      ]
+    },
+    "context_freshness": {
+      "enum": [
+        "FRESH",
+        "REVALIDATE"
+      ]
+    },
+    "auxiliary_facts": {
+      "type": "object"
+    },
+    "fit_receipt_fields_shown": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3
+    }
+  }
+}

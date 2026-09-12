@@ -1,0 +1,15 @@
+{
+  "manifest_schema_version": "1.0",
+  "core_pool_version": "core_pool_seed_001",
+  "locale": "ja-JP",
+  "scope": "P0_SOLO_ADULT",
+  "status": "RELEASE_CANDIDATE",
+  "canonical_version": "v2.4.1",
+  "context_policy_version": "context_v241_cal1",
+  "audit_policy_version": "seed_audit_v1_1_plus_v241",
+  "coverage_policy_version": "bootstrap_v241",
+  "resolution_count": 0,
+  "released_at": null,
+  "approved_by": null,
+  "content_hash": null
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SeedResolution",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "resolution_id",
+    "experience_id",
+    "title",
+    "action_copy",
+    "trajectory_compatibility",
+    "required_detour_scope",
+    "need_conflicts",
+    "required_resources",
+    "dynamic_fact_requirements",
+    "semantic_cluster",
+    "content_version"
+  ],
+  "properties": {
+    "resolution_id": {
+      "type": "string"
+    },
+    "experience_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "action_copy": {
+      "type": "string",
+      "minLength": 1
+    },
+    "trajectory_compatibility": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "ANY",
+          "RETURNING_HOME",
+          "EN_ROUTE_FIXED",
+          "STAYING",
+          "WAITING",
+          "OPEN_ENDED",
+          "UNKNOWN"
+        ]
+      }
+    },
+    "required_detour_scope": {
+      "enum": [
+        "NONE",
+        "SMALL",
+        "OPEN"
+      ]
+    },
+    "need_conflicts": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "NONE",
+          "MEAL_PENDING",
+          "REST_NEEDED",
+          "UNKNOWN"
+        ]
+      }
+    },
+    "required_resources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dynamic_fact_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "semantic_cluster": {
+      "type": "string"
+    },
+    "content_version": {
+      "type": "string"
+    },
+    "review_status": {
+      "enum": [
+        "REVIEW_REQUIRED",
+        "HUMAN_GO",
+        "PARK",
+        "REJECT"
+      ]
+    }
+  }
+}
