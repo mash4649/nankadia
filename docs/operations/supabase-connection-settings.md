@@ -13,6 +13,9 @@
 - CLI link: 完了。`status=ACTIVE_HEALTHY`
 - 料金プラン: `Free` を Dashboard で確認。Compute は `nano`（`t4g.nano`）
 - 作成時: `--size` と `--high-availability` を指定せず、Free Plan の共有リソースで作成
+- Expoアプリ: `apps/mobile`（name=`Nankadia`、slug=`nankadia`）
+- EAS project: owner=`mash4649`、project ID=`b8a84309-7727-4666-b89d-0a8543f1ca8f`
+- EAS Dashboard: <https://expo.dev/accounts/mash4649/projects/nankadia>
 
 ## 値の種類と保管場所
 
@@ -27,7 +30,8 @@
 
 - `supabase secrets list --project-ref uqkvntykubpbqzazlxpi` の結果は空。現時点でFunctionコードがないため、追加secretは未定義。
 - Supabaseの標準環境変数（`SUPABASE_URL`、`SUPABASE_SECRET_KEYS`等）はEdge Functionsへ自動注入されるため、手動登録不要。
-- EASの `development`／`preview`／`production` への公開値登録は、ExpoアプリプロジェクトとEAS project ID／owner／slugが確定してから実施する。現リポジトリには `package.json`、`app.json`、`app.config.*`、`eas.json` がないため、対象を推測して登録しない。
+- EASの `development`／`preview`／`production` へ `EXPO_PUBLIC_SUPABASE_URL` と `EXPO_PUBLIC_SUPABASE_PUBLISHABLE_KEY` をproject scope・plaintextで登録済み。service role／secret key／DB passwordは登録していない。
+- Expo owner `mash4649` は複数EAS projectを所有できる。追加プロジェクトは一意のslugとproject IDを持ち、環境変数は各project scopeで分離する。
 
 ## 次に実行するコマンド（対象確定後）
 
@@ -38,7 +42,7 @@ supabase secrets set --project-ref uqkvntykubpbqzazlxpi CUSTOM_NAME='<secret-val
 supabase secrets list --project-ref uqkvntykubpbqzazlxpi
 ```
 
-Expoプロジェクト確定後、公開値をEASの各環境へ登録する:
+追加のExpoプロジェクトを作成した場合、公開値をそのprojectの各環境へ登録する:
 
 ```bash
 eas env:set --environment development --name EXPO_PUBLIC_SUPABASE_URL --value '<project-url>' --visibility plaintext
