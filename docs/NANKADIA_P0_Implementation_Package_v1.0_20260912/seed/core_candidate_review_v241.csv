@@ -1,6 +1,6 @@
 ﻿resolution_id,title,archetype,human_decision,human_comment,trajectory_compatibility,required_detour_scope,need_conflicts,soft_context_requirements,expected_duration_minutes,effort_level,cost_bucket,indoor_outdoor,weather_dependency,mobility_requirement,place_dependency,required_resources,dynamic_fact_requirements,semantic_cluster,discovery_quality,situation_sensitive,metadata_review_status
 SC-001,1色だけの採集,BA-01,GO,ユーザー承認: 7つから3つへ変更。写真は任意。Human Review判定: GO,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-002,5つの音の地図,BA-01,PENDING,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
+SC-002,5つの音の地図,BA-01,PENDING,ユーザー承認: 5つから3つへ変更。Human Review判定はPENDING,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
 SC-003,いつもと違う場所から10分,BA-01,PENDING,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
 SC-004,目の前の物を博物館にする,BA-01,PENDING,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
 SC-006,忘れていた物を1個だけ発掘,BA-02,PENDING,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
