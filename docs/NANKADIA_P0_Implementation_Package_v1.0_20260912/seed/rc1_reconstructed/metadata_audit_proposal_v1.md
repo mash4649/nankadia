@@ -64,7 +64,7 @@ No field is inferred from a title alone. `PROPOSED` rows require batch human con
 | SC-014 | STAYING / NONE / [] | 10 / LOW | INDOOR / NONE / HOME_OR_CURRENT_PLACE | past_photo_access | 3 | PROPOSED |
 | SC-016 | ANY / NONE / [] | 5 / LOW | FLEXIBLE / NONE / CURRENT_PLACE | [] | 3 | PROPOSED |
 
-SC-013 cannot be classified until the six card-supplied missions are written. The category labels alone (see, hear, touch, move, draw, photograph) are insufficient to determine resource, safety, trajectory, and conflict rules.
+SC-013 cannot be classified until the six card-supplied missions are written. The user has supplied one candidate mission for the photograph option: 「気になったものを1つ選び、写真または一言で残す。」The other five missions and the final card behavior remain unresolved; category labels alone are insufficient to determine resource, safety, trajectory, and conflict rules.
 
 ### BA-05 — neighborhood rediscovery (`semantic_cluster=neighborhood_rediscovery`)
 
@@ -124,11 +124,11 @@ All BA-09 rows have `weather_dependency=NONE` and `situation_sensitive=YES`.
 
 | ID | trajectory / detour / conflicts | duration / effort | environment / mobility / place | required resources | DQ | status |
 |---|---|---|---|---|---:|---|
-| SC-038 | OPEN_ENDED / OPEN / MEAL_PENDING, REST_NEEDED | TBD / MEDIUM | OUTDOOR / WALKING / SAFE_LOCAL_AREA | [] | 4 | NEEDS_DURATION |
+| SC-038 | OPEN_ENDED / OPEN / MEAL_PENDING, REST_NEEDED | 30 / MEDIUM | OUTDOOR / WALKING / SAFE_LOCAL_AREA | [] | 4 | PROPOSED |
 | SC-039 | OPEN_ENDED / OPEN / MEAL_PENDING, REST_NEEDED | 60 / MEDIUM | OUTDOOR / WALKING / SAFE_LOCAL_AREA | [] | 4 | PROPOSED |
 | SC-040 | OPEN_ENDED / NONE / MEAL_PENDING, REST_NEEDED | 75 / MEDIUM | OUTDOOR / WALKING / KNOWN_SAFE_ROUTE | [] | 3 | PROPOSED |
 
-All BA-10 rows are `WEATHER_SENSITIVE` and `situation_sensitive=YES`. SC-038 needs a duration because the approved rewrite removed the original 75-minute value.
+All BA-10 rows are `WEATHER_SENSITIVE` and `situation_sensitive=YES`. SC-038 now uses the user-approved 30-minute duration and revised title/body; the canonical metadata remains `REVIEW_REQUIRED` until the batch audit is approved.
 
 ## Batch review required
 
@@ -137,6 +137,6 @@ Before canonical import, confirm or change:
 1. the shared taxonomy and defaults;
 2. all `PROPOSED` rows as a batch or by exception;
 3. the six concrete SC-013 missions;
-4. SC-038's expected duration.
+4. SC-013's remaining five missions and final card behavior.
 
 Only after that may values be copied into the canonical review CSV and the `REVIEW_REQUIRED` gate be cleared.
