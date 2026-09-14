@@ -1,37 +1,37 @@
-﻿resolution_id,title,archetype,human_decision,human_comment,trajectory_compatibility,required_detour_scope,need_conflicts,soft_context_requirements,expected_duration_minutes,effort_level,cost_bucket,indoor_outdoor,weather_dependency,mobility_requirement,place_dependency,required_resources,dynamic_fact_requirements,semantic_cluster,discovery_quality,situation_sensitive,metadata_review_status
-SC-001,1色だけの採集,BA-01,GO,ユーザー承認: 7つから3つへ変更。写真は任意。Human Review判定: GO,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-002,3つの音の地図,BA-01,GO,ユーザー承認: 5つから3つへ変更。Human Review判定: GO,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-003,いつもと違う場所から10分,BA-01,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-004,目の前の物を博物館にする,BA-01,GO,ユーザー指定変更: 展示タイトルのみ,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-006,忘れていた物を1個だけ発掘,BA-02,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-007,好きな曲の脇役を追う,BA-02,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-008,いつもの飲み物を別の体験に,BA-02,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-009,印象に残ったものを1ページ,BA-03,GO,ユーザー指定変更: 今日見たもので印象に残ったものを1ページ描く・書く,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-010,目の前の3つで架空の店を開く,BA-03,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-011,身近な物を3つ並べ替える,BA-03,GO,ユーザー確定変更: 身近な物を3つ選び、配置を入れ替えてみる。,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-012,利き手じゃない3分スケッチ,BA-03,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-013,気になったものを1つ残す,BA-04,GO,ユーザー確定変更: 気になったものを1つ選び、写真または一言で残す。複数からのランダム選択はなし。,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-014,過去写真から新しい気づき,BA-04,GO,ユーザー指定変更: 過去写真から3枚選び新しい気づきを見つける,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-016,架空映画タイトルを3本作る,BA-04,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-017,一本だけ知らない道,BA-05,GO,ユーザー指定変更: 15分歩き普段通らない安全な道を1本入れる,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-018,近所をポストカードにする,BA-05,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-019,気になる場所の利用者を想像する,BA-05,GO,ユーザー指定変更: 気になる看板・張り紙・施設を1つ見つけ利用者を想像する,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-020,音の濃淡マップ,BA-05,GO,ユーザー指定変更: 30分歩く,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-021,3曲ペースムーブ,BA-06,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-022,帰り道だけ変える10分,BA-06,GO,ユーザー指定変更: 安全な範囲で10分歩き帰りは別の道で戻る,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-023,動くものを身体でコピー,BA-06,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-024,3つの目線で同じ景色を見る,BA-06,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-025,明かりを少なくして過ごす,BA-07,GO,ユーザー指定変更: 普段より明かりを少なく・小さくして過ごす,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-026,3素材の触感ランキング,BA-07,GO,ユーザー指定変更: 安全な素材を3つ選ぶ,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-027,隠れた部分を想像する,BA-07,GO,ユーザー確定変更: 一部が隠れている物を3つ見つけ、隠れている部分を想像してみる。,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-028,影を別のものに見立てる,BA-07,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-029,見たまま一筆輪郭画,BA-08,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-030,2通りで撮り比べ,BA-08,GO,ユーザー指定変更: 三分割線と交点を平易に説明する,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-031,1分観察で変化を見つける,BA-08,GO,ユーザー確定変更: 今いる場所を1分観察し、音・光・人や物の動きから変化を1つ見つける。,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-032,ランダム鏡文字3語,BA-08,GO,ユーザー指定変更: 文字候補もカードで指定する,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-034,記憶地図→答え合わせ,BA-09,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-035,ランダムページから読む,BA-09,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-036,言葉なしで今の気分を1枚にする,BA-09,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-038,小さなときめきを5つ見つける,BA-10,GO,ユーザー確定変更: これから30分歩く範囲の中で、少しでもときめいたものを5つ、写真または一言メモでまとめる。,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-039,街の「誰かの工夫」を5個集める,BA-10,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
-SC-040,いつもの道を逆向きで辿る,BA-10,GO,,,,,,,,,,,,,,,,,,REVIEW_REQUIRED
+resolution_id,title,archetype,human_decision,human_comment,trajectory_compatibility,required_detour_scope,need_conflicts,soft_context_requirements,expected_duration_minutes,effort_level,cost_bucket,indoor_outdoor,weather_dependency,mobility_requirement,place_dependency,required_resources,dynamic_fact_requirements,semantic_cluster,discovery_quality,situation_sensitive,metadata_review_status
+SC-001,1色だけの採集,BA-01,GO,ユーザー承認: 7つから3つへ変更。写真は任意。Human Review判定: GO,"[""ANY""]",NONE,[],{},5,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,[],[],state_shift,3,NO,HUMAN_GO
+SC-002,3つの音の地図,BA-01,GO,ユーザー承認: 5つから3つへ変更。Human Review判定: GO,"[""ANY""]",NONE,[],{},3,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,[],[],state_shift,3,NO,HUMAN_GO
+SC-003,いつもと違う場所から10分,BA-01,GO,,"[""STAYING"",""WAITING""]",NONE,[],{},10,LOW,FREE,INDOOR,NONE,NONE,SAFE_LOCAL_AREA,"[""safe_seat""]",[],state_shift,2,YES,HUMAN_GO
+SC-004,目の前の物を博物館にする,BA-01,GO,ユーザー指定変更: 展示タイトルのみ,"[""ANY""]",NONE,[],{},3,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,"[""nearby_object""]",[],state_shift,3,NO,HUMAN_GO
+SC-006,忘れていた物を1個だけ発掘,BA-02,GO,,"[""STAYING""]",NONE,[],{},5,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""storage_area""]",[],familiar_reframing,3,YES,HUMAN_GO
+SC-007,好きな曲の脇役を追う,BA-02,GO,,"[""ANY""]",NONE,[],{},4,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,"[""music_playback""]",[],familiar_reframing,2,NO,HUMAN_GO
+SC-008,いつもの飲み物を別の体験に,BA-02,GO,,"[""STAYING""]",NONE,[],{},5,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""existing_drink""]",[],familiar_reframing,2,YES,HUMAN_GO
+SC-009,印象に残ったものを1ページ,BA-03,GO,ユーザー指定変更: 今日見たもので印象に残ったものを1ページ描く・書く,"[""STAYING""]",NONE,[],{},10,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""paper"",""pen""]",[],hands_on_creation,3,YES,HUMAN_GO
+SC-010,目の前の3つで架空の店を開く,BA-03,GO,,"[""STAYING""]",NONE,[],{},10,MEDIUM,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""three_nearby_objects""]",[],hands_on_creation,4,YES,HUMAN_GO
+SC-011,身近な物を3つ並べ替える,BA-03,GO,ユーザー確定変更: 身近な物を3つ選び、配置を入れ替えてみる。,"[""STAYING""]",NONE,[],{},5,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""three_nearby_objects""]",[],hands_on_creation,3,YES,HUMAN_GO
+SC-012,利き手じゃない3分スケッチ,BA-03,GO,,"[""STAYING""]",NONE,[],{},3,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""paper"",""pen"",""nearby_object""]",[],hands_on_creation,3,YES,HUMAN_GO
+SC-013,気になったものを1つ残す,BA-04,GO,ユーザー確定変更: 気になったものを1つ選び、写真または一言で残す。複数からのランダム選択はなし。,"[""ANY""]",NONE,[],{},10,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,[],[],mental_play,4,NO,HUMAN_GO
+SC-014,過去写真から新しい気づき,BA-04,GO,ユーザー指定変更: 過去写真から3枚選び新しい気づきを見つける,"[""STAYING""]",NONE,[],{},10,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""past_photo_access""]",[],mental_play,3,YES,HUMAN_GO
+SC-016,架空映画タイトルを3本作る,BA-04,GO,,"[""ANY""]",NONE,[],{},5,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,[],[],mental_play,3,NO,HUMAN_GO
+SC-017,一本だけ知らない道,BA-05,GO,ユーザー指定変更: 15分歩き普段通らない安全な道を1本入れる,"[""RETURNING_HOME"",""WAITING""]",SMALL,"[""REST_NEEDED""]",{},15,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],neighborhood_rediscovery,3,YES,HUMAN_GO
+SC-018,近所をポストカードにする,BA-05,GO,,"[""RETURNING_HOME"",""WAITING"",""OPEN_ENDED""]",SMALL,"[""REST_NEEDED""]",{},15,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],neighborhood_rediscovery,3,YES,HUMAN_GO
+SC-019,気になる場所の利用者を想像する,BA-05,GO,ユーザー指定変更: 気になる看板・張り紙・施設を1つ見つけ利用者を想像する,"[""RETURNING_HOME"",""WAITING"",""OPEN_ENDED""]",SMALL,"[""REST_NEEDED""]",{},15,LOW,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],neighborhood_rediscovery,4,YES,HUMAN_GO
+SC-020,音の濃淡マップ,BA-05,GO,ユーザー指定変更: 30分歩く,"[""OPEN_ENDED""]",OPEN,"[""MEAL_PENDING"",""REST_NEEDED""]",{},30,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],neighborhood_rediscovery,3,YES,HUMAN_GO
+SC-021,3曲ペースムーブ,BA-06,GO,,"[""ANY""]",NONE,"[""REST_NEEDED""]",{},10,MEDIUM,FREE,FLEXIBLE,NONE,LIGHT_MOVEMENT,CURRENT_PLACE,"[""music_playback""]",[],light_body_activation,2,YES,HUMAN_GO
+SC-022,帰り道だけ変える10分,BA-06,GO,ユーザー指定変更: 安全な範囲で10分歩き帰りは別の道で戻る,"[""RETURNING_HOME""]",SMALL,"[""REST_NEEDED""]",{},10,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],light_body_activation,3,YES,HUMAN_GO
+SC-023,動くものを身体でコピー,BA-06,GO,,"[""ANY""]",NONE,"[""REST_NEEDED""]",{},5,MEDIUM,FREE,FLEXIBLE,NONE,LIGHT_MOVEMENT,CURRENT_PLACE,"[""visible_moving_object""]",[],light_body_activation,4,YES,HUMAN_GO
+SC-024,3つの目線で同じ景色を見る,BA-06,GO,,"[""ANY""]",NONE,"[""REST_NEEDED""]",{},5,LOW,FREE,FLEXIBLE,NONE,LIGHT_MOVEMENT,CURRENT_PLACE,"[""visible_scene""]",[],light_body_activation,3,YES,HUMAN_GO
+SC-025,明かりを少なくして過ごす,BA-07,GO,ユーザー指定変更: 普段より明かりを少なく・小さくして過ごす,"[""STAYING""]",NONE,[],{},5,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""adjustable_light""]",[],sensory_shift,3,YES,HUMAN_GO
+SC-026,3素材の触感ランキング,BA-07,GO,ユーザー指定変更: 安全な素材を3つ選ぶ,"[""STAYING""]",NONE,[],{},5,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""three_safe_personal_items""]",[],sensory_shift,3,YES,HUMAN_GO
+SC-027,隠れた部分を想像する,BA-07,GO,ユーザー確定変更: 一部が隠れている物を3つ見つけ、隠れている部分を想像してみる。,"[""ANY""]",NONE,[],{},5,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,"[""partially_occluded_objects""]",[],sensory_shift,3,NO,HUMAN_GO
+SC-028,影を別のものに見立てる,BA-07,GO,,"[""STAYING""]",NONE,[],{},10,MEDIUM,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""safe_light_source"",""nearby_object""]",[],sensory_shift,4,YES,HUMAN_GO
+SC-029,見たまま一筆輪郭画,BA-08,GO,,"[""STAYING""]",NONE,[],{},10,MEDIUM,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""paper"",""pen"",""nearby_object""]",[],micro_skill,3,YES,HUMAN_GO
+SC-030,2通りで撮り比べ,BA-08,GO,ユーザー指定変更: 三分割線と交点を平易に説明する,"[""ANY""]",NONE,[],{},10,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,"[""camera""]",[],micro_skill,3,NO,HUMAN_GO
+SC-031,1分観察で変化を見つける,BA-08,GO,ユーザー確定変更: 今いる場所を1分観察し、音・光・人や物の動きから変化を1つ見つける。,"[""ANY""]",NONE,[],{},1,LOW,FREE,FLEXIBLE,NONE,NONE,CURRENT_PLACE,[],[],micro_skill,3,NO,HUMAN_GO
+SC-032,ランダム鏡文字3語,BA-08,GO,ユーザー指定変更: 文字候補もカードで指定する,"[""STAYING""]",NONE,[],{},5,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""mirror"",""paper"",""pen""]",[],micro_skill,4,YES,HUMAN_GO
+SC-034,記憶地図→答え合わせ,BA-09,GO,,"[""STAYING"",""WAITING""]",NONE,[],{},15,MEDIUM,FREE,FLEXIBLE,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""paper"",""pen""]",[],quiet_immersion,4,YES,HUMAN_GO
+SC-035,ランダムページから読む,BA-09,GO,,"[""STAYING""]",NONE,[],{},30,LOW,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""book""]",[],quiet_immersion,2,YES,HUMAN_GO
+SC-036,言葉なしで今の気分を1枚にする,BA-09,GO,,"[""STAYING""]",NONE,[],{},40,MEDIUM,FREE,INDOOR,NONE,NONE,HOME_OR_CURRENT_PLACE,"[""paper"",""pen""]",[],quiet_immersion,3,YES,HUMAN_GO
+SC-038,小さなときめきを5つ見つける,BA-10,GO,ユーザー確定変更: これから30分歩く範囲の中で、少しでもときめいたものを5つ、写真または一言メモでまとめる。,"[""OPEN_ENDED""]",OPEN,"[""MEAL_PENDING"",""REST_NEEDED""]",{},30,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],mini_adventure,4,YES,HUMAN_GO
+SC-039,街の「誰かの工夫」を5個集める,BA-10,GO,,"[""OPEN_ENDED""]",OPEN,"[""MEAL_PENDING"",""REST_NEEDED""]",{},60,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,SAFE_LOCAL_AREA,[],[],mini_adventure,4,YES,HUMAN_GO
+SC-040,いつもの道を逆向きで辿る,BA-10,GO,,"[""OPEN_ENDED""]",NONE,"[""MEAL_PENDING"",""REST_NEEDED""]",{},75,MEDIUM,FREE,OUTDOOR,WEATHER_SENSITIVE,WALKING,KNOWN_SAFE_ROUTE,[],[],mini_adventure,3,YES,HUMAN_GO

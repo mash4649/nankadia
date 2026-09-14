@@ -6,7 +6,7 @@
 
 - CORE候補36件とPARK候補4件の本文・G3・Discovery・PARK理由を、受領資料の記載どおりに保持する。
 - `human_decision` は、ユーザーの一括指示と追加確定により、CORE 36件すべて **GO** とした。受領資料の「RC1候補」判定をHuman Reviewの承認結果へ読み替えない。
-- 受領資料にないtrajectory / detour / immediate need / resource / safety metadataは補完しない。既存CSVの `REVIEW_REQUIRED` を維持する。
+- metadata監査提案はユーザー承認済み。36件のv2.4.1 metadataを正本CSVへ反映し、`metadata_review_status=HUMAN_GO` とした。Seedのimmutable release、hash、coverageゲートは別途残る。
 - exactな `resolutions.jsonl` 文字列、原本ハッシュ、個別レビュアー・日時は未確認事項として残す。
 
 ## 機械検証

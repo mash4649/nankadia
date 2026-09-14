@@ -2,7 +2,7 @@
 
 ## Status
 
-This is an operator review packet, not a release payload. It does not change the canonical metadata values or clear any `REVIEW_REQUIRED` status; approved content wording is recorded separately in the review CSV and amendments log.
+This packet records the batch metadata decision approved by the user on 2026-09-14. The canonical review CSV now contains the approved metadata and uses `HUMAN_GO`; this is not yet an immutable released Seed payload.
 
 Basis:
 
@@ -10,7 +10,7 @@ Basis:
 - approved qualitative detour policy in ADR-0003;
 - original RC1 candidate bodies and explicit Discovery values (`D2`–`D4`).
 
-No field is inferred from a title alone. `PROPOSED` rows require batch human confirmation before becoming a Seed payload. `NEEDS_*` rows have missing material content and remain unresolved.
+No field is inferred from a title alone. The values below were approved as a batch recommendation; release still requires the separate immutable Seed, hash, and coverage gates.
 
 ## Shared proposal rules
 
@@ -60,11 +60,11 @@ No field is inferred from a title alone. `PROPOSED` rows require batch human con
 
 | ID | trajectory / detour / conflicts | duration / effort | environment / mobility / place | required resources | DQ | status |
 |---|---|---|---|---|---:|---|
-| SC-013 | ANY / NONE / [] | TBD / LOW | FLEXIBLE / NONE / CURRENT_PLACE | [] | 4 | NEEDS_DURATION |
+| SC-013 | ANY / NONE / [] | 10 / LOW | FLEXIBLE / NONE / CURRENT_PLACE | [] | 4 | PROPOSED |
 | SC-014 | STAYING / NONE / [] | 10 / LOW | INDOOR / NONE / HOME_OR_CURRENT_PLACE | past_photo_access | 3 | PROPOSED |
 | SC-016 | ANY / NONE / [] | 5 / LOW | FLEXIBLE / NONE / CURRENT_PLACE | [] | 3 | PROPOSED |
 
-SC-013 content is now fixed as one self-contained mission: 「気になったものを1つ選び、写真または一言で残す。」There is no six-choice menu or random selection. The final wording does not specify a duration, so `expected_duration_minutes` remains unresolved rather than being inferred from the former 10-minute version.
+SC-013 content is one self-contained mission: 「気になったものを1つ選び、写真または一言で残す。」There is no six-choice menu or random selection. The approved recommendation retains a 10-minute duration from the original micro-mission contract.
 
 ### BA-05 — neighborhood rediscovery (`semantic_cluster=neighborhood_rediscovery`)
 
@@ -132,10 +132,10 @@ All BA-10 rows are `WEATHER_SENSITIVE` and `situation_sensitive=YES`. SC-038 now
 
 ## Batch review required
 
-Before canonical import, confirm or change:
+Batch approval record:
 
-1. the shared taxonomy and defaults;
-2. all `PROPOSED` rows as a batch or by exception;
-3. SC-013's expected duration.
+- Shared taxonomy and defaults: approved.
+- All 36 CORE metadata rows: approved and copied to `core_candidate_review_v241.csv`.
+- SC-013 expected duration: approved at 10 minutes.
 
-Only after that may values be copied into the canonical review CSV and the `REVIEW_REQUIRED` gate be cleared.
+Remaining release work is the immutable Seed migration, content hash, and situation-sensitive synthetic coverage gate.

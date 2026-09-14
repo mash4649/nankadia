@@ -64,7 +64,14 @@
 
 SC-038は所要時間を30分としてmetadata監査提案を更新した。SC-013は単一ミッションとして内容と実行方式を確定したが、所要時間が未記載のためmetadataの一部は引き続き未確定とする。
 
-SC-013の本文と実行方式は確定したが、最終本文に所要時間がないため、`expected_duration_minutes` は推測せず `REVIEW_REQUIRED` のままとする。
+（承認前の記録）SC-013の本文と実行方式は確定したが、最終本文に所要時間がないため、`expected_duration_minutes` は推測せず `REVIEW_REQUIRED` のままとする。後続のmetadata一括承認で10分に確定した。
+
+## metadata一括承認（2026-09-14）
+
+- ユーザーの「推奨で進めて」により、metadata監査提案の共有ルールと36件の提案値を一括承認。
+- SC-013の `expected_duration_minutes` は、元の10分ミッション契約を維持して **10分** とした。
+- 正本CSVの全CORE 36件へmetadataを反映し、`metadata_review_status` を `HUMAN_GO` とした。
+- これはmetadata監査の承認であり、immutable Seed release、content hash、situation-sensitive synthetic coverageの完了を意味しない。
 
 ### 内容基準の暫定抽出（未確定）
 
